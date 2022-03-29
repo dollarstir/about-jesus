@@ -20,7 +20,7 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 // import './home.dart';
 
 class Home extends StatefulWidget {
-  Home({Key key}) : super(key: key);
+  Home({Key ?key}) : super(key: key);
   var playerState = FlutterRadioPlayer.flutter_radio_paused;
 
   var volume = 0.8;
