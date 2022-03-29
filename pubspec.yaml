@@ -42,6 +42,9 @@ dependencies:
   google_fonts:
   path_provider:
   url_launcher: ^6.0.20
+  share: ^0.6.4+5
+  # url_launcher:
+  convex_bottom_bar: 
 
 dev_dependencies:
   flutter_test:
