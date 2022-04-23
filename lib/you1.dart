@@ -9,7 +9,7 @@ class WebViewClass extends StatefulWidget {
  
 class YtubeState extends State<WebViewClass>{
  
-  num position = 1 ;
+  var position = 1 ;
  
   final key = UniqueKey();
  

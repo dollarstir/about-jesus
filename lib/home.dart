@@ -20,7 +20,7 @@ import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 // import './home.dart';
 
 class Home extends StatefulWidget {
-  Home({Key ?key}) : super(key: key);
+  Home({Key? key}) : super(key: key);
   var playerState = FlutterRadioPlayer.flutter_radio_paused;
 
   var volume = 0.8;
@@ -219,8 +219,14 @@ class _HomeState extends State<Home> {
                                         alignment: Alignment.bottomRight,
                                         children: [
                                           Container(
-                                            width: MediaQuery.of(context).size.width * 0.25,
-                                            height: MediaQuery.of(context).size.height * 0.16,
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.25,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.16,
                                             decoration: BoxDecoration(
                                               color: Colors.black,
                                               borderRadius: BorderRadius.all(
@@ -316,9 +322,9 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.only(left: 40, right: 40,top: 5,bottom: 5),
+                        padding: EdgeInsets.only(
+                            left: 40, right: 40, top: 5, bottom: 5),
                         margin: EdgeInsets.only(left: 5, right: 5),
-
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Color.fromRGBO(245, 104, 22, 1),
@@ -345,7 +351,7 @@ class _HomeState extends State<Home> {
                                         fontSize: 12,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white));
-                                print(snapshot.data[0]);
+                                // print(snapshot.data[0]);
                               }),
                         ),
                       ),
@@ -488,8 +494,7 @@ class _HomeState extends State<Home> {
                   child: ListView(
                     shrinkWrap: true,
                     children: [
-
-                    Container(
+                      Container(
                         // decoration: BoxDecoration(
                         //   border: Border(bottom: BorderSide(width: 1)
                         // ),
@@ -504,7 +509,7 @@ class _HomeState extends State<Home> {
                                 isvisible3 = false;
                                 isvisible4 = false;
                                 isvisible5 = false;
-                                 isvisible6 = true;
+                                isvisible6 = true;
                               });
                               // Navigator.push(
                               //   context,
@@ -563,7 +568,7 @@ class _HomeState extends State<Home> {
                                 isvisible3 = false;
                                 isvisible4 = false;
                                 isvisible5 = false;
-                                 isvisible6 = false;
+                                isvisible6 = false;
                               });
                               // Navigator.push(
                               //   context,
@@ -621,7 +626,7 @@ class _HomeState extends State<Home> {
                                 isvisible3 = false;
                                 isvisible4 = false;
                                 isvisible5 = false;
-                                 isvisible6 = false;
+                                isvisible6 = false;
                               });
                               // Navigator.push(
                               //   context,
@@ -679,7 +684,7 @@ class _HomeState extends State<Home> {
                                 isvisible3 = true;
                                 isvisible4 = false;
                                 isvisible5 = false;
-                                 isvisible6 = false;
+                                isvisible6 = false;
                               });
 
                               _flutterRadioPlayer.setUrl(
@@ -728,7 +733,7 @@ class _HomeState extends State<Home> {
                                 isvisible3 = false;
                                 isvisible4 = true;
                                 isvisible5 = false;
-                                 isvisible6 = false;
+                                isvisible6 = false;
                               });
 
                               _flutterRadioPlayer.setUrl(
@@ -777,7 +782,7 @@ class _HomeState extends State<Home> {
                                 isvisible3 = false;
                                 isvisible4 = false;
                                 isvisible5 = true;
-                                 isvisible6 = false;
+                                isvisible6 = false;
                               });
                               _flutterRadioPlayer.setUrl(
                                   "http://stream.zeno.fm/emvrn3kb4v8uv",
@@ -817,32 +822,31 @@ class _HomeState extends State<Home> {
             ],
           )),
 
-      //   bottomNavigationBar:  ConvexAppBar(
-      // style: TabStyle.flip,backgroundColor: Color.fromRGBO(245, 104, 22, 1),
-      // items: [
-      //   TabItem(icon: Icons.radio_rounded, title: 'Radio'),
-      //   TabItem(icon: Icons.folder_open, title: 'Godly messages'),
-
-      //   TabItem(icon: Icons.privacy_tip_outlined, title: 'Privacy'),
-
-      // ],
-      //     onTap: (index) {
-      //       print(index);
-      //       if (index == 2) {
-      //         Navigator.push(context, MaterialPageRoute(builder: (context) {
-      //           return Privacy();
-      //         }));
-      //       } else if (index == 1) {
-      //         Navigator.push(context, MaterialPageRoute(builder: (context) {
-      //           return Mess();
-      //         }));
-      //       } else {
-      //         Navigator.push(context, MaterialPageRoute(builder: (context) {
-      //           return Home();
-      //         }));
-      //       }
-      //     },
-      //   ),
+      bottomNavigationBar: ConvexAppBar(
+        style: TabStyle.flip,
+        backgroundColor: Color.fromRGBO(245, 104, 22, 1),
+        items: [
+          TabItem(icon: Icons.radio_rounded, title: 'Radio'),
+          TabItem(icon: Icons.folder_open, title: 'Godly messages'),
+          TabItem(icon: Icons.privacy_tip_outlined, title: 'Privacy'),
+        ],
+        onTap: (index) {
+          print(index);
+          if (index == 2) {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return Privacy();
+            }));
+          } else if (index == 1) {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return Mess();
+            }));
+          } else {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return Home();
+            }));
+          }
+        },
+      ),
     );
   }
 

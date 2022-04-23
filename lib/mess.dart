@@ -9,7 +9,7 @@ class Mess extends StatefulWidget {
  
 class YtubeState extends State<Mess>{
  
-  num position = 1 ;
+  var position = 1 ;
  
   final key = UniqueKey();
  
