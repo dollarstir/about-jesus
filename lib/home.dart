@@ -189,8 +189,8 @@ class _HomeState extends State<Home> {
                           stream: _flutterRadioPlayer.isPlayingStream,
                           initialData: widget.playerState,
                           builder: (BuildContext context,
-                              AsyncSnapshot<String> snapshot) {
-                            String returnData = snapshot.data;
+                              AsyncSnapshot<String?> snapshot) {
+                            String returnData = snapshot.data!;
                             print("object data: " + returnData);
                             switch (returnData) {
                               case FlutterRadioPlayer.flutter_radio_stopped:
